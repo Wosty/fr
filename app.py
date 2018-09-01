@@ -3,7 +3,7 @@ import sys
 import json
 import time
 
-from groupy.client import Client
+#from groupy.client import Client
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
