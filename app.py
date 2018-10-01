@@ -12,7 +12,7 @@ app = Flask(__name__)
 def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
-  if os.getenv('KEY_WORD') in data['text']:
+  if os.getenv('KEY_WORD').lower() in data['text']:
     faceList = open('faces.txt','r').readlines()
     msg = random.choice(faceList).strip('\n')
     send_message(msg)
